@@ -55,12 +55,12 @@ func getModeFormula(mode string) []int {
 
 	switch mode {
 	case "Major", "Ionian": 	return []int{0, 2, 4, 5, 7, 9, 11}
-	case "Dorain": 				return []int{0, 2, 3, 5, 7, 9, 10}
-	case "Phrygian":			return []int{0, 1, 3, 5, 7, 8, 10}
-	case "Lydian": 				return []int{0, 2, 4, 6, 7, 9, 11}
-	case "Mixolydian": 			return []int{0, 2, 4, 5, 7, 9, 10}
+	case "Dorain": 			return []int{0, 2, 3, 5, 7, 9, 10}
+	case "Phrygian":		return []int{0, 1, 3, 5, 7, 8, 10}
+	case "Lydian": 			return []int{0, 2, 4, 6, 7, 9, 11}
+	case "Mixolydian": 		return []int{0, 2, 4, 5, 7, 9, 10}
 	case "Minor", "Aeolian": 	return []int{0, 2, 3, 5, 7, 8, 10}
-	case "Locrian": 			return []int{0, 1, 3, 5, 6, 8, 10}
-	default: 					return []int{}
+	case "Locrian": 		return []int{0, 1, 3, 5, 6, 8, 10}
+	default: 			return []int{}
 	}
 }
