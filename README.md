@@ -27,13 +27,11 @@ D-6-------10---8---10-----
 A--10-8-------------------  
 E------8-3---8---8---6-10-  
 
-This is a lot more useful to spark ideas, as it is actually playable.
+^ This one sounds heavy, trust me. **\m/** 
+
+This is a lot more useful to spark ideas, as it is actually playable. Timing doesn't exist now, so the tempo of the notes is all customizable. 
 
 If you want to unleash your inner Mark Morton, you should generate a riff using only the low string (oh and tune to Drop D).
-
-D--0-6-8-8-3-0-0-3-3-1-6-0-
-
-^ This one sounds heavy, trust me. **\m/** 
 
 
 There is quite some work to be done here for this to be actually useful, but this was mainly created in process of expirementing with [Go](https://golang.org).
