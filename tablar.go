@@ -19,6 +19,7 @@ func main() {
 	var scale = getScale(notes, key, mode)
 	fmt.Println(key,mode,":",scale)
 
+	// Update fretboard to adjust from standard tuning
 	var fretBoard = createFretBoard(notes)
 	var playableNotes = getPlayableNotes(fretBoard, scale)
 
@@ -27,7 +28,6 @@ func main() {
 }
 
 // Generate a random riff with the number of playable notes defined
-// TODO: Provide constraints on how far away the notes can be from one another
 func generateRiff(playableNotes [][]int, count int) [][]string {
 
 	var riff [][]string
@@ -58,7 +58,6 @@ func printRiff(tab [][]string) {
 }
 
 // Generate a Standard E Tuning fretboard with notes for open strings up to fret 11
-// TODO: Support drop tunings
 func createFretBoard(notes []string) [][]string {
 
 	var fretBoard [][]string
@@ -132,7 +131,7 @@ func getModeFormula(mode string) []int {
 
 	switch mode {
 	case "Major", "Ionian": return []int{0, 2, 4, 5, 7, 9, 11}
-	case "Dorain": return []int{0, 2, 3, 5, 7, 9, 10}
+	case "Dorian": return []int{0, 2, 3, 5, 7, 9, 10}
 	case "Phrygian": return []int{0, 1, 3, 5, 7, 8, 10}
 	case "Lydian": return []int{0, 2, 4, 6, 7, 9, 11}
 	case "Mixolydian": return []int{0, 2, 4, 5, 7, 9, 10}
