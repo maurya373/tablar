@@ -10,8 +10,11 @@ import "time"
 func main() {
 
 	notes := []string{"A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"}
+
+	// Customize params for variable results
 	key := "G"
 	mode := "Phrygian"
+	notesToGenerate := 12
 
 	var scale = getScale(notes, key, mode)
 	fmt.Println(key,mode,":",scale)
@@ -19,7 +22,7 @@ func main() {
 	var fretBoard = createFretBoard(notes)
 	var playableNotes = getPlayableNotes(fretBoard, scale)
 
-	var riff = generateRiff(playableNotes, 8)
+	var riff = generateRiff(playableNotes, notesToGenerate)
 	printRiff(riff)
 }
 
@@ -29,8 +32,8 @@ func generateRiff(playableNotes [][]int, count int) [][]string {
 
 	var riff [][]string
 	for i := 0; i < count; i++ {
-		var stringNum = random(5)
-		var noteInScale = random(6)
+		var stringNum = random(len(playableNotes)-1)
+		var noteInScale = random(len(playableNotes[0])-1)
 		var fret = playableNotes[stringNum][noteInScale]
 
 		var note = []string{"-","-","-","-","-","-"}
